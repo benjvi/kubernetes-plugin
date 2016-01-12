@@ -1,4 +1,7 @@
 /target/
+
+!/target/kubernetes.hpi
+
 /.classpath
 /.project
 /.settings/
