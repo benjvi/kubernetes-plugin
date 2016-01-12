@@ -1,10 +1,10 @@
-FROM csanchez/jenkins-for-volumes:1.625.1
+FROM jenkins
 
 COPY src/main/docker/plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 
-# ENV VERSION 0.4-SNAPSHOT
-# COPY target/kubernetes.hpi /usr/share/jenkins/ref/plugins/kubernetes.hpi
+ENV VERSION 0.6-SNAPSHOT
+COPY target/kubernetes.hpi /usr/share/jenkins/ref/plugins/kubernetes.jpi
 # RUN curl -o /usr/share/jenkins/ref/plugins/kubernetes.hpi \
 #  http://repo.jenkins-ci.org/snapshots/org/csanchez/jenkins/plugins/kubernetes/0.4/kubernetes-$VERSION.hpi
 
